@@ -8,13 +8,16 @@ html { font-family: 'Outfit', Trebuchet, sans-serif; font-size: 18px; line-heigh
 
 body{  display: block; min-height: 100vh; margin: 0; text-rendering: optimizeSpeed;  background: hsl(217, 54%, 11%); }
 
-.container {background: hsl(216, 50%, 16%); display: flex; flex-direction:column; margin: 10rem auto; width: 20rem; height: 35rem; max-width: 90%; box-shadow: 0.5rem 0.5rem 0.5rem 0.35rem rgba(0, 0, 0, 0.2); border-radius: 0.5rem; }
+.container {background: hsl(216, 50%, 16%); display: flex; flex-direction:column; margin: 2rem auto; width: 20rem; height: 35rem; max-width: 90%; box-shadow: 0.5rem 0.5rem 0.5rem 0.35rem rgba(0, 0, 0, 0.2); border-radius: 0.5rem;
+@media (min-width:758px){margin: 10rem auto} }
     .image {display: flex;align-items: center; justify-content: center;  cursor: pointer; }
        
         .image img{ margin-top: 1.5rem; border-radius: 0.5rem;  width: 85%;
-            &:hover + .image-hover { background: url("./images/icon-view.svg") no-repeat center; }}
+          &:hover{ content: url("./images/icon-view.svg"); background-color:hsl(178, 100%, 50%) ; transition: background-color .5s; }
+          &:hover svg{ max-width: 1rem;}
+        }
             
-            .image-hover{display: none;}
+           
     .description-container{display: block; margin: 1rem 1.5rem; letter-spacing: 0.05rem; }
         .title {display: block; color: hsl(0, 0%, 100%); font-size: 1.3rem; font-weight: 600; cursor: pointer;
             &:hover  {color:hsl(178, 100%, 50%); } }
@@ -31,3 +34,6 @@ body{  display: block; min-height: 100vh; margin: 0; text-rendering: optimizeSpe
         .author p{ color: hsl(215, 51%, 70%);}
             .author p span {color: hsl(0, 0%, 100%); cursor: pointer;
                 &:hover  {color:hsl(178, 100%, 50%); }}
+
+
+              
